@@ -4,7 +4,7 @@ RUN mkdir /pdf && chmod 777 /pdf
 WORKDIR /ILovePDF
 
 COPY ILovePDF/requirements.txt requirements.txt
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install --use-feature=2020-resolver -r requirements.txt
 
 COPY ILovePDF/libgenesis/requirements.txt requirements.txt
 RUN pip install -r requirements.txt
